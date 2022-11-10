@@ -22,5 +22,9 @@
   "bugs": {
     "url": "https://github.com/kimmihi/react-use-intersection-observer-pack/issues"
   },
-  "homepage": "https://github.com/kimmihi/react-use-intersection-observer-pack#readme"
+  "homepage": "https://github.com/kimmihi/react-use-intersection-observer-pack#readme",
+  "devDependencies": {
+    "tsdx": "^0.14.1",
+    "typescript": "^3.9.10"
+  }
 }
