@@ -1,0 +1,26 @@
+{
+  "name": "react-use-intersection-observer-pack",
+  "version": "1.0.0",
+  "description": "Infinite scroll & lazy loading hooks used in react based on intersection observer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kimmihi/react-use-intersection-observer-pack.git"
+  },
+  "keywords": [
+    "react",
+    "react-hooks",
+    "intersection-observer",
+    "infinite-scroll",
+    "lazy-loading"
+  ],
+  "author": "kimmihi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kimmihi/react-use-intersection-observer-pack/issues"
+  },
+  "homepage": "https://github.com/kimmihi/react-use-intersection-observer-pack#readme"
+}
