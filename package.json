@@ -24,7 +24,12 @@
   },
   "homepage": "https://github.com/kimmihi/react-use-intersection-observer-pack#readme",
   "devDependencies": {
+    "@types/react": "^18.0.26",
     "tsdx": "^0.14.1",
     "typescript": "^3.9.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }
