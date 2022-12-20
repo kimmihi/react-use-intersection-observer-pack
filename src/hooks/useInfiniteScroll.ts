@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 
-type IntersectionObserverOption = {
+export type IntersectionObserverOption = {
   root?: Element | null;
   rootMargin?: string;
   threshold?: number | number[];
 };
 
-interface useInfiniteScrollInitProps {
+export interface InfiniteScrollHooksProps {
   hasMore: boolean;
   onLoadMore: () => void;
   delayMs?: number;
@@ -18,7 +18,7 @@ const useInfiniteScroll = ({
   onLoadMore,
   delayMs = 300,
   option,
-}: useInfiniteScrollInitProps) => {
+}: InfiniteScrollHooksProps) => {
   const [observedTargetRef, setObservedTargetRef] = useState<Element | null>(
     null
   );
