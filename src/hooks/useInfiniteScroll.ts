@@ -20,7 +20,7 @@ const useInfiniteScroll = ({
   option,
 }: InfiniteScrollHooksProps) => {
   const [observedTargetRef, setObservedTargetRef] = useState<Element | null>(
-    null
+    null,
   );
 
   useEffect(() => {
@@ -32,7 +32,7 @@ const useInfiniteScroll = ({
       },
       {
         ...option,
-      }
+      },
     );
 
     if (observedTargetRef) {
