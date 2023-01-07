@@ -1,10 +1,14 @@
-export {
-  default as useInfiniteScroll,
+import useInfiniteScroll, {
   InfiniteScrollHooksProps,
   IntersectionObserverOption,
 } from "./hooks/useInfiniteScroll";
 
+import LazyLoadImg, { LazyLoadImgProps } from "./components/LazyLoadImg";
+
 export {
-  default as LazyLoadImg,
+  useInfiniteScroll,
+  LazyLoadImg,
+  InfiniteScrollHooksProps,
+  IntersectionObserverOption,
   LazyLoadImgProps,
-} from "./components/LazyLoadImg";
+};
