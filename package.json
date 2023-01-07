@@ -1,6 +1,6 @@
 {
   "name": "react-use-intersection-observer-pack",
-  "version": "1.0.4",
+  "version": "2.0.0",
   "description": "Infinite scroll & lazy loading hooks used in react based on intersection observer",
   "main": "dist/index.js",
   "module": "dist/react-use-intersection-observer-pack.esm.js",
