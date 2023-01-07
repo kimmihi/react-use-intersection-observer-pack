@@ -19,7 +19,11 @@ export default function LazyLoadImg({ src, alt }: LazyLoadImgProps) {
       }
     });
 
-    imgRef?.current && imgObserver.observe(imgRef.current);
+    if (imgRef === null) {
+      return;
+    }
+
+    imgRef.current && imgObserver.observe(imgRef.current);
   }, [imgRef]);
 
   return <img src={isView ? src : ""} alt={alt} ref={imgRef} />;
