@@ -22,7 +22,7 @@ import { useState, useRef } from "react";
 import { useInfiniteScroll } from "react-use-intersection-observer-pack";
 
 export default function InfiniteScrollComponent() {
-  const rootElRef = (useRef < HTMLDivElement) | (null > null);
+  const rootElRef =useRef<HTMLDivElement | null>(null);
 
   const { data, setData } = useState([]);
   const { observedTargetRef } = useInfiniteScroll({
