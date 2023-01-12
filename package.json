@@ -1,15 +1,21 @@
 {
   "name": "react-use-intersection-observer-pack",
-  "version": "2.0.1",
+  "version": "2.0.4",
   "description": "Infinite scroll & lazy loading hooks used in react based on intersection observer",
-  "main": "dist/index.js",
-  "module": "dist/react-use-intersection-observer-pack.esm.js",
-  "typings": "dist/index.d.ts",
+  "main": "dist/react-use-intersection-observer-pack.js",
+  "module": "./dist/react-use-intersection-observer-pack.esm.mjs",
+  "source": "./src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/react-use-intersection-observer-pack.esm.mjs"
+    }
+  },
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "tsdx build",
+    "build": "rm -rf ./dist && microbundle",
     "lint": "npx eslint ./src",
     "prepare": "husky install"
   },
@@ -49,6 +55,7 @@
     "typescript": "^3.9.10"
   },
   "dependencies": {
+    "microbundle": "^0.15.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   }
