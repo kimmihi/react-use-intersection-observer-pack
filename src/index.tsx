@@ -1,9 +1,12 @@
-import useInfiniteScroll, {
+import useInfiniteScroll from "./hooks/useInfiniteScroll";
+
+import LazyLoadImg from "./components/LazyLoadImg";
+
+import {
   InfiniteScrollHooksProps,
   IntersectionObserverOption,
-} from "./hooks/useInfiniteScroll";
-
-import LazyLoadImg, { LazyLoadImgProps } from "./components/LazyLoadImg";
+  LazyLoadImgProps,
+} from "./types";
 
 export {
   useInfiniteScroll,

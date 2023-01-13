@@ -1,12 +1,8 @@
+import { LazyLoadImgProps } from "../../types";
 import React, { useState, useEffect, useRef } from "react";
 
-export interface LazyLoadImgProps {
-  src: string;
-  alt: string;
-}
-
 export default function LazyLoadImg({ src, alt }: LazyLoadImgProps) {
-  const imgRef = useRef(null);
+  const imgRef = useRef<HTMLImageElement | null>(null);
   const [isView, setIsView] = useState<boolean>(false);
 
   useEffect(() => {

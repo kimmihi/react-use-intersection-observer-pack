@@ -1,17 +1,5 @@
+import { InfiniteScrollHooksProps } from "../types";
 import { useState, useEffect } from "react";
-
-export type IntersectionObserverOption = {
-  root?: Element | null;
-  rootMargin?: string;
-  threshold?: number | number[];
-};
-
-export interface InfiniteScrollHooksProps {
-  hasMore: boolean;
-  onLoadMore: () => void;
-  delayMs?: number;
-  option?: IntersectionObserverOption;
-}
 
 const useInfiniteScroll = ({
   hasMore,
