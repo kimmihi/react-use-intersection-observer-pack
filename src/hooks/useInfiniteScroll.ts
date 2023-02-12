@@ -1,35 +1,35 @@
 import { InfiniteScrollHooksProps } from "../types";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
+
+import useIntersectionObserver from "./useIntersectionObserver";
 
 const useInfiniteScroll = ({
   hasMore,
   onLoadMore,
   delayMs = 300,
-  option,
+  options,
 }: InfiniteScrollHooksProps) => {
-  const [observedTargetRef, setObservedTargetRef] = useState<Element | null>(
-    null,
-  );
+  const { ref, isIntersecting } = useIntersectionObserver({ options });
+
+  const shouldMoreLoad = hasMore && isIntersecting;
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && hasMore) {
-          onLoadMore();
-        }
-      },
-      {
-        ...option,
-      },
-    );
-
-    if (observedTargetRef) {
-      observer.observe(observedTargetRef);
+    if (shouldMoreLoad === false) {
+      return;
     }
-  }, [delayMs, hasMore, observedTargetRef, onLoadMore, option]);
+
+    const timer = setTimeout(() => {
+      onLoadMore();
+    }, delayMs);
+
+    // eslint-disable-next-line consistent-return
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [delayMs, onLoadMore, shouldMoreLoad]);
 
   return {
-    observedTargetRef: setObservedTargetRef,
+    observedTargetRef: ref,
   };
 };
 
