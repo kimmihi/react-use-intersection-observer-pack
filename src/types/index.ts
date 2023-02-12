@@ -13,5 +13,9 @@ export interface InfiniteScrollHooksProps {
   hasMore: boolean;
   onLoadMore: () => void;
   delayMs?: number;
-  option?: IntersectionObserverOption;
+  options?: IntersectionObserverOption;
+}
+
+export interface IntersectionObserverHookProps {
+  options?: IntersectionObserverOption;
 }
